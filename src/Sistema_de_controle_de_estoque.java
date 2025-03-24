@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Sistema_de_controle_de_estoque {
+    private static final Scanner sc = new Scanner(System.in);
 
     // Códigos cores no terminal
     public static final String RESET = "\u001B[0m";
@@ -22,7 +24,7 @@ public class Sistema_de_controle_de_estoque {
                 
                 --> """);
 
-        Scanner sc = new Scanner(System.in);
+       
         int scMenu = sc.nextInt();
         
         /*
@@ -109,7 +111,6 @@ public class Sistema_de_controle_de_estoque {
         Função para escolher entro os dois relatórios: produtos gerais ou produtos com baixo estoque.
      */
     static void escolherRelatorio(ArrayList<Produto> lista) {
-        Scanner sc = new Scanner(System.in);
 
         System.out.println("1 - Relatório geral");
         System.out.print("2 - Relatório de produtos com baixo estoque\n--> ");
@@ -133,7 +134,6 @@ public class Sistema_de_controle_de_estoque {
         Função para registrar uma venda caso o produto exista e tenha estoque suficiente dele.
      */
     static void registrarVenda(ArrayList<Produto> lista, int codigo) {
-        Scanner sc = new Scanner(System.in);
 
         Relatorio.gerarRelatorioVenda(lista, codigo);
 
